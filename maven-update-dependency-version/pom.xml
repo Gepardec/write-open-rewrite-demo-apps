@@ -41,7 +41,7 @@
         <configuration>
           <configLocation>src/main/resources/rewrite.yml</configLocation>
           <activeRecipes>
-            <recipe>com.gepardec.UpgradeDependencyVersionExample</recipe>
+            <recipe>com.gepardec.UpgradeManagedDependencyVersionExample</recipe>
           </activeRecipes>
         </configuration>
       </plugin>
