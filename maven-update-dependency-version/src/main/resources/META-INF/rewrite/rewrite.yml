@@ -1,9 +1,0 @@
----
-type: specs.openrewrite.org/v1beta/recipe
-name: com.gepardec.UpgradeDependencyVersionExample
-displayName: Upgrade Maven dependency version example
-recipeList:
-  - org.openrewrite.maven.UpgradeDependencyVersion:
-      groupId: com.mysema.querydsl*
-      artifactId: querydsl-core*
-      newVersion: 5.0.0

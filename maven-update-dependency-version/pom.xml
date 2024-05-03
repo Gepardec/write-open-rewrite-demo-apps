@@ -39,7 +39,7 @@
         <groupId>org.openrewrite.maven</groupId>
         <artifactId>rewrite-maven-plugin</artifactId>
         <configuration>
-          <configLocation>src/main/resources/META-INF/rewrite/rewrite.yml</configLocation>
+          <configLocation>src/main/resources/rewrite.yml</configLocation>
           <activeRecipes>
             <recipe>com.gepardec.UpgradeDependencyVersionExample</recipe>
           </activeRecipes>
