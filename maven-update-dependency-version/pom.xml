@@ -32,5 +32,18 @@
       <artifactId>querydsl-core</artifactId>
     </dependency>
   </dependencies>
-  
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openrewrite.maven</groupId>
+        <artifactId>rewrite-maven-plugin</artifactId>
+        <configuration>
+          <activeRecipes>
+            <recipe>com.gepardec.UpgradeDependencyVersionExample</recipe>
+          </activeRecipes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
