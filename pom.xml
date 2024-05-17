@@ -15,6 +15,8 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <version.rewrite-maven-plugin>5.29.0</version.rewrite-maven-plugin>
+
+        <version.write-open-rewrite>1.0.1-SNAPSHOT</version.write-open-rewrite>
     </properties>
 
     <modules>
@@ -28,6 +30,13 @@
                     <groupId>org.openrewrite.maven</groupId>
                     <artifactId>rewrite-maven-plugin</artifactId>
                     <version>${version.rewrite-maven-plugin}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.gepardec</groupId>
+                            <artifactId>write-open-rewrite</artifactId>
+                            <version>${version.write-open-rewrite}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>

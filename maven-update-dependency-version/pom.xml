@@ -11,6 +11,11 @@
   </parent>
 
   <artifactId>maven-update-dependency-version</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>submodule1</module>
+    <module>submodule2</module>
+  </modules>
 
   <properties>
     <querydsl-core.version>3.7.4</querydsl-core.version>
@@ -26,22 +31,14 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.mysema.querydsl</groupId>
-      <artifactId>querydsl-core</artifactId>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
         <groupId>org.openrewrite.maven</groupId>
         <artifactId>rewrite-maven-plugin</artifactId>
         <configuration>
-          <configLocation>src/main/resources/rewrite.yml</configLocation>
           <activeRecipes>
-            <recipe>com.gepardec.UpgradeManagedDependencyVersionExample</recipe>
+            <recipe>com.gepardec.UpgradeQueryDslDependency</recipe>
           </activeRecipes>
         </configuration>
       </plugin>
