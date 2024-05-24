@@ -1,0 +1,7 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.gepardec.demo.apps.recipes.SayHelloRecipeExample
+displayName: Upgrade Maven dependency version example
+recipeList:
+  - com.gepardec.demo.apps.recipes.SayHelloRecipe:
+      fullyQualifiedClassName: com.gepardec.Gepard

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.gepardec</groupId>
-    <artifactId>write-open-rewrite-demo-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
+    <parent>
+        <groupId>com.gepardec</groupId>
+        <artifactId>write-open-rewrite-demo-app</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-  <artifactId>maven-update-dependency-version</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>submodule1</module>
-    <module>submodule2</module>
-  </modules>
+    <artifactId>maven-update-dependency-version</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>submodule1</module>
+        <module>submodule2</module>
+    </modules>
 
-  <properties>
-    <querydsl-core.version>3.7.4</querydsl-core.version>
-  </properties>
+    <properties>
+        <querydsl-core.version>3.7.4</querydsl-core.version>
+    </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.mysema.querydsl</groupId>
-        <artifactId>querydsl-core</artifactId>
-        <version>${querydsl-core.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.mysema.querydsl</groupId>
+                <artifactId>querydsl-core</artifactId>
+                <version>${querydsl-core.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.openrewrite.maven</groupId>
-        <artifactId>rewrite-maven-plugin</artifactId>
-        <configuration>
-          <activeRecipes>
-            <recipe>com.gepardec.UpgradeQueryDslDependency</recipe>
-          </activeRecipes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <configuration>
+                    <activeRecipes>
+                        <recipe>com.gepardec.UpgradeQueryDslDependency</recipe>
+                    </activeRecipes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

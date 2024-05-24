@@ -21,6 +21,8 @@
 
     <modules>
         <module>maven-update-dependency-version</module>
+        <module>demo-apps-recipes</module>
+        <module>say-hello-world</module>
     </modules>
 
     <build>
@@ -30,11 +32,20 @@
                     <groupId>org.openrewrite.maven</groupId>
                     <artifactId>rewrite-maven-plugin</artifactId>
                     <version>${version.rewrite-maven-plugin}</version>
+                    <configuration>
+                        <!-- enables per module rewrite functionality, if not set, plugin will collect all recipes of all projects and run them on all modules -->
+                        <runPerSubmodule>true</runPerSubmodule>
+                    </configuration>
                     <dependencies>
                         <dependency>
                             <groupId>com.gepardec</groupId>
                             <artifactId>write-open-rewrite</artifactId>
                             <version>${version.write-open-rewrite}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.gepardec</groupId>
+                            <artifactId>demo-apps-recipes</artifactId>
+                            <version>${project.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
