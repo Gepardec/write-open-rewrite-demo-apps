@@ -10,20 +10,4 @@
     </parent>
 
     <artifactId>say-hello-world</artifactId>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.openrewrite.maven</groupId>
-                <artifactId>rewrite-maven-plugin</artifactId>
-                <configuration>
-                    <!-- important, if not set you can not run rewrite:dryRun from project root -->
-                    <configLocation>rewrite.yml</configLocation>
-                    <activeRecipes>
-                        <recipe>com.gepardec.demo.apps.recipes.SayHelloRecipeExample</recipe>
-                    </activeRecipes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
